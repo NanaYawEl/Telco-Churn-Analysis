@@ -29,3 +29,11 @@ Several encoding techniques were tested on each categorical feature separately a
 
 ## Data imbalance
 Data imbalance affects machine learning models by tending only to predict the majority class and ignoting the minority class, hence, having major misclassification of the minority class in comparison with the majority class. Hence, we use techniques to balance class distribution in the data.
+
+## Models Training
+Four different models were applied on the data and all results are reported with confusion matrix and classification report showing the precision, recall, and f1-score metrics.
+
+1. Logistic regression Best parameters after several trials: C=200 (very large c value trying to fit the data as possible without overfitting), max_iter=1000
+2. Support vector classifier Best prameters: kernel='linear', C=20
+3. XGBoost classifier RandomizedSearchCV is used for hyperparameters tuning with     StratifiedKFold of 5 splits.
+4. Multi-layer Perceptron (MLP) classifier.
